@@ -1,0 +1,17 @@
+.sidebar {
+  background-color: #d5dce8;
+  float: left;
+  height: 60%;
+  width: 40%;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #b8bcb5;
+}
+
+.new-room-button {
+
+}
+
+.new-room-modal {
+  border: 1px solid #b8bcb5;
+}

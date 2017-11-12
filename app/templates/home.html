@@ -1,7 +1,12 @@
-<h1>Chat Konekt</h1>
+<div class="sidebar"
+<h1>Konekt Chat</h1>
 
-<div class='rooms'>
+
+<div class='room-list'>
   <ul>
-  <li class='chatrooms' ng-repeat='room in home.rooms'> {{room.$value}} </li>
+  <li class='chatrooms' ng-repeat='room in home.rooms' ng-click="home.setRoom(room)"> {{room.$value}} </li>
   </ul>
+<button class="new-room-button" ng-click="home.addRoom()">New Room</button>
+
+</div>
 </div>
