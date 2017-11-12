@@ -1,16 +1,16 @@
 (function(){
-  function ModalCtrl(Room, $uibModalInstance) {
+  function ModalCtrl($uibModalInstance, Room) {
     var modal = this;
 
     modal.submit = function() {
-      Room.add(modal.newRoom.name)
+      Room.add(modal.room.name)
       $uibModalInstance.close();
     };
 
     modal.cancel = function(){
       $uibModalInstance.dismiss();
     };
-}
+};
 
 angular
   .module('blocChat')

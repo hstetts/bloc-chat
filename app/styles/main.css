@@ -1,17 +1,28 @@
 .sidebar {
+  position: fixed;
   background-color: #d5dce8;
   float: left;
-  height: 60%;
-  width: 40%;
+  height: 100%;
+  width: 20%;
   margin: 5px;
   padding: 10px;
   border: 1px solid #b8bcb5;
 }
 
-.new-room-button {
-
+/* Messages*/
+.messages {
+  background-color: #ffffff;
+  border: 1px solid #b8bcb5;
+  position: fixed;
+  top: 0;
+  left: 20%;
+  height: 100%;
+  width: 80%;
+  text-decoration-color: green;
 }
 
 .new-room-modal {
+  margin: 20%;
   border: 1px solid #b8bcb5;
+  text-align: center;
 }

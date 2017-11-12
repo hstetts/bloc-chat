@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>Konekt</title>
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
 </head>
 <body>
-  <ui-view><ui-view>
+  <ui-view></ui-view>
 
   <!--Angular -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -23,6 +24,9 @@
   <!--Angular Animate-->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
 
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
   <script>
   // Initialize Firebase
   var config = {
@@ -36,14 +40,13 @@
   firebase.initializeApp(config);
   </script>
 
-  <!-- AngularFire -->
-  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
   <!-- Application Files -->
-  <script src="/scripts/app.js"></script>
+  <script src='/scripts/app.js'></script>
   <script src='/scripts/controllers/HomeCtrl.js'></script>
-  <script src="/scripts/controllers/ModalCtrl.js"></script>
-  <script src="/scripts/services/room.js"></script>
+  <script src='/scripts/controllers/ModalCtrl.js'></script>
+  <script src='/scripts/services/room.js'></script>
+  <script src='/scripts/services/messages.js'></script>
 
 </body>
 </html>
