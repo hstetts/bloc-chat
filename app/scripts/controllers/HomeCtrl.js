@@ -1,12 +1,12 @@
 (function() {
     function HomeCtrl(Room, Message, $uibModal, $scope) {
       this.rooms = Room.all;
-      this.roomSelected = false;
+      this.selectedRoom = false;
 
       this.setRoom = function(roomId) {
         this.currentRoom = roomId;
-        this.currentmessages = Message.getByRoomId(this.currentRoom.$id);
-        this.roomSelected = true;
+        this.currentMessages = Message.getByRoomId(this.currentRoom.$id);
+        this.selectedRoom = true;
       };
 
       this.addRoom = function(){

@@ -1,28 +1,36 @@
-.sidebar {
-  position: fixed;
-  background-color: #d5dce8;
-  float: left;
-  height: 100%;
-  width: 20%;
-  margin: 5px;
-  padding: 10px;
-  border: 1px solid #b8bcb5;
-}
+
 
 /* Messages*/
-.messages {
-  background-color: #ffffff;
-  border: 1px solid #b8bcb5;
+.messagepane {
+  background-color: #ffbc51;
+  border: 4px solid #b8bcb5;
   position: fixed;
-  top: 0;
-  left: 20%;
+  top: 0.45%;
+  left: 31%;
+  bottom: 1%;
   height: 100%;
   width: 80%;
-  text-decoration-color: green;
+  padding: 10px;
+}
+
+.messagepane .current_room {
+  margin: 10px;
+  padding: 10px;
 }
 
 .new-room-modal {
   margin: 20%;
   border: 1px solid #b8bcb5;
   text-align: center;
+}
+
+.sidebar {
+  position: fixed;
+  background-color: #d5dce8;
+  float: left;
+  height: 100%;
+  width: 30%;
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid #b8bcb5;
 }

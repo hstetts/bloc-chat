@@ -3,17 +3,21 @@
 
 
 <div class='room-list'> Current Chatrooms: </div>
-<div class='chatrooms' ng-repeat='room in home.rooms' ng-click='home.setRoom(room)'> {{room.$value}}
+<div class='chatrooms' ng-repeat='room in home.rooms' ng-click='home.setRoom(room)'>
+  {{room.$value}}
 </div>
   <button class="new-room-button" ng-click="home.addRoom()">New Room</button>
 
-
-<div class='messages'>
-
-  <div class= 'message' ng-repeat='message in home.messages'>
-    <div class='username'>username: {{ messages.username }} </div>
-    <div class='content'>content: {{ messages.content }} </div>
-    <div class='timestamp'>timestamp: {{ message.timestamp }} </div>
-    <div class="roomId">Room ID: {{ message.roomId }}</div>
+<div class='messagepane'>
+  <div class='current_room'>
+    <h2 class='name' ng-show='home.selectedRoom'>Room: </h2>
+        {{home.currentRoom.$value}}
   </div>
+    <div class= 'message' ng-repeat='message in home.messages'>
+      <div class='username'>Username: {{ message.username }} </div>
+      <div class='content'>content: {{ message.content }} </div>
+      <div class='timestamp'>timestamp: {{ message.timestamp }} </div>
+      <div class='roomId'>Room ID: {{ message.roomId }} </div>
+    </div>
+</div>
 </div>
