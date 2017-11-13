@@ -1,12 +1,23 @@
-<div class="sidebar"
+<div class="sidebar">
 <h1>Konekt Chat</h1>
 
 
-<div class='room-list'>
-  <ul>
-  <li class='chatrooms' ng-repeat='room in home.rooms' ng-click="home.setRoom(room)"> {{room.$value}} </li>
-  </ul>
-<button class="new-room-button" ng-click="home.addRoom()">New Room</button>
+<div class='room-list'> Current Chatrooms: </div>
+<div class='chatrooms' ng-repeat='room in home.rooms' ng-click='home.setRoom(room)'>
+  {{room.$value}}
+</div>
+  <button class="new-room-button" ng-click="home.addRoom()">New Room</button>
 
+<div class='messagepane'>
+  <div class='current_room'>
+    <h2 class='name' ng-show='home.selectedRoom'>Room: </h2>
+        {{home.currentRoom.$value}}
+  </div>
+    <div class= 'message' ng-repeat='message in home.messages'>
+      <div class='username'>Username: {{ message.username }} </div>
+      <div class='content'>content: {{ message.content }} </div>
+      <div class='timestamp'>timestamp: {{ message.timestamp }} </div>
+      <div class='roomId'>Room ID: {{ message.roomId }} </div>
+    </div>
 </div>
 </div>
