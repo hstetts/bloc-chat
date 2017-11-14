@@ -13,7 +13,7 @@
     <h2 class='name' ng-show='home.selectedRoom'>Room: </h2>
         {{home.currentRoom.$value}}
   </div>
-    <div class= 'message' ng-repeat='message in home.messages'>
+    <div class= 'message' ng-repeat='message in home.currentMessages'>
       <div class='username'>Username: {{ message.username }} </div>
       <div class='content'>content: {{ message.content }} </div>
       <div class='timestamp'>timestamp: {{ message.timestamp }} </div>
