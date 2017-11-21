@@ -7,11 +7,11 @@
      *it makes CookiesCtrl.setUsername equal to a function which takes in
      *the parameter username.
      */
-    //cookies.submitUserName = function() {
-      //console.log("we are getting here");
-      //$cookies.put('blocChatCurrentUser', username);
-      //$uibModalInstance.close();
-    //}
+    cookies.submitUserName = function() {
+      console.log("we are getting here");
+      $cookies.put('blocChatCurrentUser', username);
+      $uibModalInstance.close();
+    }
   };
 
   angular

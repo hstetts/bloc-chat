@@ -17,7 +17,7 @@
       $uibModalInstance.close();
       //need to write a function that adds the name to firebase
       //and pass it name
-    }
+    };
 };
 
 angular
