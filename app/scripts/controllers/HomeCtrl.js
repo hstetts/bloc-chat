@@ -1,5 +1,5 @@
 (function() {
-    function HomeCtrl(Room, Message, $uibModal, $scope) {
+    function HomeCtrl(Room, Message, $uibModal, $scope, $cookies) {
       this.rooms = Room.all;
       this.selectedRoom = false;
 
@@ -14,7 +14,7 @@
           animation: this.animationsEnabled,
           templateUrl: '/templates/new_room_modal.html',
           controller: 'ModalCtrl as modal'
-      });
+      })
     };
 
       this.message = function(){
@@ -24,5 +24,5 @@
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', 'Message', '$uibModal', '$scope', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message', '$uibModal', '$scope', '$cookies', HomeCtrl]);
 })();
