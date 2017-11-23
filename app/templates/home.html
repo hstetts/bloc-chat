@@ -12,12 +12,20 @@
   <div class='current_room'>
     <h2 class='name' ng-show='home.selectedRoom'>Room: </h2>
         {{home.currentRoom.$value}}
+        {{user}}
   </div>
-    <div class= 'message' ng-repeat='message in home.currentMessages'>
-      <div class='username'>username: {{ message.username }} </div>
-      <div class='content'>content: {{ message.content }} </div>
-      <div class='timestamp'>timestamp: {{ message.timestamp }} </div>
-      <div class='roomId'>Room ID: {{ message.roomId }} </div>
+    <div class='messageSection' ng-show='home.selectedRoom'>
+      <div class= 'message' ng-repeat='message in home.currentMessages'>
+        <div class='username'>username: {{ message.username }} </div>
+        <div class='content'>content: {{ message.content }} </div>
+        <div class='timestamp'>timestamp: {{ message.timestamp }} </div>
+      </div>
     </div>
-</div>
+  </div>
+    <div class='chatBox' ng-show='home.selectedRoom'>
+      <form ng-submit='home.message()'>
+        <input class='chatBar' type='text' ng-model='home.newMessage.content'>
+        <button class='sendMessage'> Send </button>
+      </form>
+    </div>
 </div>

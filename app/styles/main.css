@@ -9,7 +9,7 @@
   left: 31%;
   bottom: 1%;
   height: 100%;
-  width: 80%;
+  width: 69%;
   padding: 10px;
 }
 
@@ -18,11 +18,31 @@
   padding: 10px;
 }
 
+.chatBox {
+  position: fixed;
+  top: 90%;
+  left: 31%;
+  bottom: 1%;
+  width: 72%;
+  padding: 1px;
+}
+
+.chatBox .chatBar {
+  position: inherit;
+  border: 2px solid #b8bcb5;
+  height: 40px;
+  width: 90%;
+
+}
+
 .new-room-modal {
   margin: 20%;
   border: 1px solid #b8bcb5;
   text-align: center;
 }
+
+
+/* sidebar */
 
 .sidebar {
   position: fixed;

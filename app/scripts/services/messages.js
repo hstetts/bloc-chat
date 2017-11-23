@@ -7,12 +7,15 @@
 /* get roomId from firebase message object */
 
     Message.getByRoomId = function(roomId) {
-      //return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
+      return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
+    };
 
-    return messages;
-  };
+    Message.send = function(newMessage) {
+      messages.$add(newMessage);
+    };
+
   return Message;
-};
+}
 
   angular
     .module('blocChat')

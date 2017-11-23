@@ -1,5 +1,5 @@
 (function() {
-  function BlocChatCookies($cookies, $uibModal) {
+  function userCookies($cookies, $uibModal, Room) {
     var currentUser = $cookies.get('blocChatCurrentUser');
     if (!currentUser || currentUser === '') {
       var modalInstance = $uibModal.open({
@@ -12,5 +12,5 @@
 
   angular
     .module('blocChat')
-    .run(['$cookies', '$uibModal', BlocChatCookies]);
+    .run(['$cookies', '$uibModal', 'Room', userCookies]);
 })();

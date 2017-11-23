@@ -15,8 +15,7 @@
       var name = modal.user.name;
       $cookies.put('blocChatCurrentUser', name);
       $uibModalInstance.close();
-      //need to write a function that adds the name to firebase
-      //and pass it name
+      Room.user = $cookies.get('blocChatCurrentUser');
     };
 };
 
