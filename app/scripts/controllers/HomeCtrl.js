@@ -13,10 +13,15 @@
 
       this.addRoom = function(){
           $uibModal.open({
+          animation: this.animationsEnabled,
           templateUrl: '/templates/new_room_modal.html',
           controller: 'ModalCtrl as modal'
-      });
+      })
     };
+
+      this.removeRoom = function(room){
+
+      }
 
       this.message = function(){
         this.newMessage.username = this.user;

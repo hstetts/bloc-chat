@@ -5,7 +5,10 @@
 <div class='sidebarChatrooms'>
 <div class='chatroomHeader'> Chatrooms: </div>
 <div class='chatrooms' ng-repeat='room in home.rooms' ng-click='home.setRoom(room)'>
-  #{{room.$value}}
+
+  {{room.$value}}
+<button class="delete-button" ng-click="home.removeRoom()"> X </button>
+
 </div>
   <button class="new-room-button" ng-click="home.addRoom()">New Room</button>
 </div>
@@ -15,7 +18,7 @@
     <h2 class='name' ng-show='home.selectedRoom'> {{home.currentRoom.$value}} </h2>
   </div>
     <div class='messageSection' ng-show='home.selectedRoom'>
-      <div class= 'message' ng-repeat='message in home.currentMessages'>
+      <div class='message' ng-repeat='message in home.currentMessages'>
         <div class='username'>: {{ message.username }} :</div>
         <div class='content'> {{ message.content }} </div>
         <div class='timestamp'>timestamp: {{ message.timestamp }} </div>
